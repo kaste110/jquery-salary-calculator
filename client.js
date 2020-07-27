@@ -3,6 +3,8 @@ console.log("js is loaded");
 $(document).ready(onReady);
 
 let employeeArray = [];
+let totalMonthly = 0;
+let employeeMonthly = 0;
 
 function onReady() {
   console.log("jquery loaded");
@@ -18,7 +20,8 @@ function clickFunction() {
     iD: $("#iD").val(),
     title: $("#title").val(),
     annualSalary: $("#annualSalary").val(),
-  };
+    employeeMonthly: $("#annualSalary").val()/12,
+  }; 
 
   if (
     employeeInput.firstName === "" ||
@@ -41,8 +44,10 @@ function clickFunction() {
   };
 };
 function appendEmployee() {
+    $("#employeeTable").empty();
     for (let employee of employeeArray){
-      $('.salaryCalcHeader').append(
-    '<li>' ${employee.firstName} '</li>');
+      $('#employeeTable').append(employee.firstName  , employee.lastName  , employee.iD  , employee.title  , employee.annualSalary);
     };
+
+    totalMonthly += employeeMonthly;
 };

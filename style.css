@@ -1,0 +1,23 @@
+.salaryCalcHeader {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    height: 80px;
+}
+
+#submitBtn {
+    float: right;
+    margin-top: 15px;
+}
+
+.addEmployeeInputs {
+    width: 893px;
+    margin-bottom: 80px;
+}
+
+#th {
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
